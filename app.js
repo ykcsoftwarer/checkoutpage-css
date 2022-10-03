@@ -41,7 +41,7 @@ productsDiv.addEventListener("click", (event) => {
 
 
      
-      
+       
     }
     else if(event.target.className == "fa-solid fa-plus") {
        console.log("artı butonu çalışıyor"); 
