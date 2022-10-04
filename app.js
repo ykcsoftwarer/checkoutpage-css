@@ -30,14 +30,20 @@ productsDiv.addEventListener("click", (event) => {
         //     calculateCartPrice();
         //   }
 
+        // event.target.nextElementSibling.innerText--;
 
-        if (event.target.nextElementSibling.innerText > 1) {
-            event.target.nextElementSibling.innerText--;
-                ;
-                calculateProductPrice(event.target);
-                calculateCartPrice();
-              }
-        
+        // if (event.target.nextElementSibling.innerText > 1) {
+        //     event.target.nextElementSibling.innerText--;
+                
+        //         calculateProductPrice(event.target);
+        //         calculateCartPrice();
+        //       }
+        // console.log("event.target.parentElement.querySelector(".quantity")innerText--;");
+        if(event.target.parentElement.querySelector(".quantity").innerText > 1) {
+            event.target.parentElement.querySelector(".quantity").innerText--;
+        } else {
+            alert("eksi butonu çalışıyor")
+        }
 
 
      
@@ -47,6 +53,9 @@ productsDiv.addEventListener("click", (event) => {
        console.log("artı butonu çalışıyor"); 
        //console.log("event.target.previousElementSibling.innerText");
        event.target.previousElementSibling.innerText++;
+  
+       
+
       
     }
     else if(event.target.classList.contains("remove-product")) {
